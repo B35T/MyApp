@@ -8,16 +8,19 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   // method
+  // Show Logos
   Widget showLogo() {
     return Container(
         width: 120, height: 120, child: Image.asset("images/logo.png"));
   }
 
+  // Application name
   Widget showAppName(String name) {
     return Text(
       name,
+
       style: TextStyle(
-        fontSize: 20,
+        fontSize: 24,
         color: Colors.blue.shade500,
         fontWeight: FontWeight.bold,
 //        fontStyle: FontStyle.normal,
@@ -26,6 +29,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // button for sign-in
   Widget signInButton() {
     return RaisedButton(
       child: Text(
@@ -37,6 +41,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // button for sign-up
   Widget signUpButton() {
     return RaisedButton(
       child: Text(
@@ -52,6 +57,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // present or add subview in ios for show button ui
   Widget showButton() {
     return Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
       signInButton(),
@@ -62,20 +68,21 @@ class _HomeState extends State<Home> {
     ]);
   }
 
+  // drawing ui on device screen
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
             child: Container(
-      decoration: BoxDecoration(
-          gradient: RadialGradient(
-              colors: [Colors.white, Colors.yellow.shade800], radius: 1)),
+//      decoration: BoxDecoration(
+//          gradient: RadialGradient(
+//              colors: [Colors.white, Colors.yellow.shade800], radius: 1)),
       child: Center(
           child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           showLogo(),
-          showAppName("amazon"),
+          showAppName("Amazing"),
           SizedBox(
             height: 10,
           ),

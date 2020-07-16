@@ -9,7 +9,6 @@ class _RegisterState extends State<Register> {
   // explicit
   final nameKey = GlobalKey<FormState>();
   // Method
-
   Widget registerButton() {
     return IconButton(
         icon: Icon(Icons.cloud_upload),
@@ -56,7 +55,7 @@ class _RegisterState extends State<Register> {
   Widget emailText() {
     String Function(String) valid = (String  text) {
       if (text.isEmpty) {
-        return "please enter display real email";
+        return "please enter true email";
       }
     };
 
@@ -84,7 +83,7 @@ class _RegisterState extends State<Register> {
           "Register",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.blue.shade900,
+        backgroundColor: Colors.lightBlue,
         actions: <Widget>[registerButton()],
       ),
       body: Form(key: nameKey,child: ListView(
